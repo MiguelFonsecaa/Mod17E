@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<title>Motor de pesquisa</title>
+<head>
+<script src="jquery-3.6.0.js"></script>
+<link rel = "stylesheet"
+         href = "//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+ 
+      <script type = "text/javascript"
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+   
+      <script type = "text/javascript"
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+      </script>
+
+      <style>
+         #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+         #sortable li { margin: 0 3px 3px 3px; padding: 0.4em;
+            padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+         #sortable li span { position: absolute; margin-left: -1.3em; }
+      </style>
+   
+      <script>
+         $(function() {
+            $( "#sortable" ).sortable();
+            $( "#sortable" ).disableSelection();
+         });
+      </script>
+<body style="background-color:lightgrey;">
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Motor de pesquisa</h2>
+<p>Digite o nome do jogador que quer encontrar: </p>  
+<input id="myInput" type="text" placeholder="Pesquisa..">
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Nacionalidade</th>
+    <th>Clube</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td>Ronaldo</td>
+    <td>Português</td>
+    <td>Man United</td>
+  </tr>
+  <tr>
+    <td>Messi</td>
+    <td>Argentino</td>
+    <td>PSG</td>
+
+  </tr>
+  <tr>
+    <td>Pogba</td>
+    <td>Francês</td>
+    <td>Man United</td>
+  </tr>
+  <tr>
+    <td>Pepe</td>
+    <td>Português</td>
+    <td>Porto</td>
+  </tr>
+  </tbody>
+</table>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+ 
+<p>Data: <input type="text" id="datepicker"></p>
+</body>
+<br><br><br><br><br><br><br><br><br>
+
+<h1>Ordene pelo seu Jogador favorito</h1>
+<ul id = "sortable">
+         <li class = "ui-state-default"><span
+            class = "ui-icon ui-icon-arrowthick-2-n-s">Ronaldo</span></li>
+         <li class = "ui-state-default"><span
+            class = "ui-icon ui-icon-arrowthick-2-n-s">Messi</span></li>
+         <li class = "ui-state-default"><span
+            class = "ui-icon ui-icon-arrowthick-2-n-s">Bale</span></li>
+         <li class = "ui-state-default"><span
+            class = "ui-icon ui-icon-arrowthick-2-n-s">Ronaldinho</span></li>
+         <li class = "ui-state-default"><span
+            class = "ui-icon ui-icon-arrowthick-2-n-s">Pogba</span></li>
+         <li class = "ui-state-default"><span
+            class = "ui-icon ui-icon-arrowthick-2-n-s">Modric</span></li>
+         <li class = "ui-state-default"><span
+            class = "ui-icon ui-icon-arrowthick-2-n-s">Pepe</span></li>
+      </ul>
+      <link rel = "stylesheet"
+         href = "//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+   
+      <script type = "text/javascript"
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+   
+      <script type = "text/javascript"
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+      </script>
+   
+ 
+      <script>
+         $(function() {
+            $( "#accordion" ).accordion();
+         });
+      </script>
+
+     
+</head>
+<body>
+  <h2>Clique para obter mais informações</h2><br>
+
+
+<div id = "accordion">
+         <h3>Ronaldo</h3>
+     
+         <div>
+            <p>
+              <ul>
+               <li>Nascimento: 5 de fevereiro de 1985 </li>
+               <li>Altura: 1,87 m</li>
+               <li>Salário: 26,52 milhões GBP</li>
+               <li>Equipa atual: Manchester United</li>
+             </ul>
+            </p>
+         </div>
+     
+         <h3>Pogba</h3>
+     
+         <div>
+            <ul>
+               <li>Nascimento: 15 de março de 1993</li>
+               <li>Altura: 1,91 m</li>
+               <li>Salário: 15,08 milhões GBP</li>
+               <li>Equipa atual: Manchester United</li>
+            </ul>
+         </div>
+     
+         <h3>Messi</h3>
+     
+         <div>
+            <ul>
+               <li>Nascimento: 24 de junho de 1987</li>
+               <li>Altura: 1,69 m</li>
+               <li>Salário: 41 milhões USD</li>
+               <li>Equipa atual: Paris Saint-Germain</li>
+            </ul>
+       
+         </div>
+     
+         <h3>Modric</h3>
+     
+         <div>
+           <ul>
+               <li>Nascimento: 9 de setembro de 1985</li>
+               <li>Altura: 1,72 m</li>
+               <li>Equipa atual: Seleção Croata de Futebol</li>
+            </ul>
+       <!-- manipulacao DOM -->
+         </div>
+         <div id="parag">
+         <p id="para1">Here is myparagraph.</p>
+         <p id="para2">Here is my second paragraph.</p>
+         </div>
+
+         <script>
+         var para = document.createElement("p");
+         var node = document.createTextNode("Here is my new one.");
+         para.appendChild(node);
+
+         var element = document.getElementById("parag");
+         element.appendChild(para);
+         </script>
+         <p id="parag"></p>
+         <script>
+         document.getElementById("parag").innerHTML = "Clique para REMOVER o espaço!";
+         </script>
+         <!-- ajax -->   
+         <div id="clickme">
+         Clique para ver um jogador
+         </div>
+         <img id="book" src="roni.jpg" alt="" width="600" height="400">
+        
+         
+</html>
+
+    
+    
+
+
+
+            
